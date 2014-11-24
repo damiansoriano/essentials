@@ -19,3 +19,6 @@ nmap <C-UP> :bp<CR>
 "nmap <C-Left> :wincmd h<CR>
 imap <C-Space> <C-n>
 set tags=tags,../tags,../../tags,../../../tags
+
+" Add TagList plugin
+filetype plugin on
