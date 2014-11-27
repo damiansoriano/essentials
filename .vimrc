@@ -22,3 +22,5 @@ set tags=tags,../tags,../../tags,../../../tags
 
 " Add TagList plugin
 filetype plugin on
+" Associate F12 to the pytags command
+noremap <f12> :silent !pytags<cr>:FufRenewCache<cr>

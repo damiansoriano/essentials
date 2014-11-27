@@ -160,3 +160,14 @@ function glog {
     git log --graph --all --format=format:"%x09%C(yellow)%h%C(reset) %C(green)%ai%x08%x08%x08%x08%x08%x08%C(reset) %C(bold white)%cn%C(reset)%C(auto)%d%C(reset)%n%x09%C(white)%s%C(reset)" --abbrev-commit "$@"
     echo
 }
+
+# Remove all tags files in dirs under . but skip .git subdirs
+function rm_tags {
+    find . -path "./.git" -prune -o -name "tags" -print | xargs rm -f
+}
+
+# Remove tags files and create new one
+function pytags {
+    rm_tags
+    ctags -R --languages=python $*
+}
