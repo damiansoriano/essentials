@@ -171,3 +171,7 @@ function pytags {
     rm_tags
     ctags -R --languages=python $*
 }
+
+function gpp {
+    git pull && git fetch --tags && git push --follow-tags
+}
