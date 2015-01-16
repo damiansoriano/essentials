@@ -24,3 +24,15 @@ set tags=tags,../tags,../../tags,../../../tags
 filetype plugin on
 " Associate F12 to the pytags command
 noremap <f12> :silent !pytags<cr>:FufRenewCache<cr>
+
+" go to defn of tag under the cursor
+fun! MatchCaseTag()
+    let ic = &ic
+    set noic
+    try
+        exe 'tjump ' . expand('<cword>')
+    finally
+       let &ic = ic
+    endtry
+endfun
+nnoremap <silent> <c-]> :call MatchCaseTag()<CR>
