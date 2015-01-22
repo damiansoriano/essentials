@@ -173,5 +173,5 @@ function pytags {
 }
 
 function gpp {
-    git pull && git fetch --tags && git push --follow-tags
+    git pull && git fetch --tags && git push --tags
 }
