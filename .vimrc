@@ -4,7 +4,6 @@ set expandtab     " insert spaces when hitting TABs
 set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
 set autoindent    " align the new line indent with the previous line
-"set clipboard=unnamedplus
 set hlsearch      " highlighting search matches
 
 set background=dark " set the color of the font for dark backgroud
@@ -36,3 +35,6 @@ fun! MatchCaseTag()
     endtry
 endfun
 nnoremap <silent> <c-]> :call MatchCaseTag()<CR>
+
+" With this vim uses the system clipboard
+set clipboard=unnamedplus
