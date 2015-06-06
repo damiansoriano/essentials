@@ -173,5 +173,13 @@ function pytags {
 }
 
 function gpp {
-    git pull && git fetch --tags && git push --tags
+    git pull && git fetch --tags && git push && git push --tags
+}
+
+# Make less work with colors when used with pipes
+export LESS=-XgmR
+
+# Shortcut to use ag on python files with less as pager
+function agp {
+    ag --python --pager=less "$@"
 }
