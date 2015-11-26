@@ -139,6 +139,13 @@ source ~/.bash-git-prompt/gitprompt.sh
 
 export GOPATH=~/go
 
+# Install undistract-me first: https://github.com/jml/undistract-me
+if ! [ -z "$BASH_VERSION" -o -z "$PS1" -o -n "$last_command_started_cache" ]; then
+  . /usr/share/undistract-me/long-running.bash
+  notify_when_long_running_commands_finish_install
+fi
+
+
 # From https://github.com/junegunn/fzf
 # Install fzf first
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
