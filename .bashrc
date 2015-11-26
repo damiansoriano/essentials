@@ -138,3 +138,7 @@ function agp {
 source ~/.bash-git-prompt/gitprompt.sh
 
 export GOPATH=~/go
+
+# From https://github.com/junegunn/fzf
+# Install fzf first
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
