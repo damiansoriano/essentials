@@ -135,6 +135,7 @@ function agp {
 }
 
 # Informative git prompt for bash, from: https://github.com/magicmonty/bash-git-prompt
+# git clone git@github.com:magicmonty/bash-git-prompt.git .bash-git-prompt
 source ~/.bash-git-prompt/gitprompt.sh
 
 export GOPATH=~/go
