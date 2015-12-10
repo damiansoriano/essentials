@@ -152,3 +152,7 @@ fi
 # From https://github.com/junegunn/fzf
 # Install fzf first
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+function killprocess {
+    kill -9 $(ps aux | grep "$1" | awk '{print $2}')
+}
